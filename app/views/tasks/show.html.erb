@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-between align-items-start">
+  <h1 class="mb-3"><%= @task.title %></h1>
+  <%= link_to raw('<i class="fa-solid fa-pen-to-square"></i> Edit task'), edit_task_path, class: 'btn btn-outline-secondary' %>
+</div>
+<div class="alert alert-info" role="alert"><%= @task.details %></div>
+<p>
+  <span class="badge bg-<%= @task.completed ? 'primary' : 'secondary' %>"><%= @task.completed ? 'COMPLETED' : 'NOT COMPLETED' %></span>
+</p>
+<hr />
+<%= link_to raw('<i class="fa-solid fa-rotate-left"></i> Go back to list'), tasks_path %>
